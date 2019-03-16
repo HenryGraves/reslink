@@ -7,7 +7,10 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname + '/../app/index.html'));
 });
 app.get('/hi', (req,res) => {
-    res.send("Hello")
+    res.send("Hello");
+});
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname + '/../app/index.html'));
 });
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
