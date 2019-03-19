@@ -20,4 +20,9 @@ const myHead = (
     </div>
 );
 
-renderCl(myHead, "body");
+//renderCl(myHead, "body");
+
+ReactDOM.render(
+    myHead,
+    document.getElementById('body')  
+);
